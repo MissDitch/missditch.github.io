@@ -24,6 +24,7 @@ h1 {
     font-family: 'Lato', sans-serif;
     margin: 2rem 0;
     font-weight: 700;
+    font-size: 2rem;
 }
 h2 {
     font-family: 'Lato', sans-serif;
@@ -35,21 +36,18 @@ h2 {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 2rem;
+    bottom: 1rem;
 }
 p {
     font-family: 'Share Tech', sans-serif;
     display:inline-block;
-    position: absolute;
-    bottom: 2rem;
+     position: absolute;
+    bottom: 4.5rem; 
     font-size: 1.2rem;
 }
-a, a:visited {
+a, a:hover, a:focus, a:visited {
     text-decoration: none;
     color: orange;
-}
-a:hover {
-    color: #fff;
 }
 .columns, .column {
     padding: 0;
@@ -64,18 +62,10 @@ a:hover {
     text-transform: uppercase;
     color: #fff;  
 }
-.button:hover {
-    background-color: orange;
-    border: 0.3rem solid orange;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);  /* schaduw-1  */
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);  /* schaduw-2  */
-}
-
 .blok {
 	margin: 1.5rem;
     max-width: 24rem;
 }
-
 .main {
     max-width: 90rem;
     font-size: 1.5rem;
@@ -83,17 +73,19 @@ a:hover {
     justify-content: center;
     align-items: center;
 }
+.main > div {
+    height: 20rem;
+    overflow: hidden;
+}
 .credits {
     color: rgba(255,255,255, 0.6) ;
     margin: 1rem 0 2rem 0;
     font-size: 1.6rem;
 }
-
-
 .image-wrapper {
     width: 100%;
     height: 16rem;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
     display: flex;
     justify-content: center;
@@ -132,45 +124,34 @@ a:hover {
     background: rgba(42,8,69, 0.7);
     font-size: 1.2rem;
     font-weight: 700;
-    padding: 0.1rem;
+    padding: 0.3rem 0;
     opacity: 1;
     transition: all 0.2s ease-in-out;
 }
-.overlay-fade-in:hover h2 {
-    transform: translateY(10rem);
-} 
 .overlay-fade-in p {
-    background: rgba(42,8,69, 0.7);
+    background: rgba(42,8,69, 0);
     transform: translateY(10rem);
     transition: all 0.4s ease-in-out; 
 }
-.overlay-fade-in:hover p {
-    transform: translateY(0rem);
-}
-.overlay-fade-in .button {
+.overlay-fade-in .button, .overlay-fade-in:hover .button {
     display: inline-block;
     text-decoration: none;
     padding: 0.5rem 1rem;
     border: 0.4rem solid rgba(100,65,165, 0.7) ;
-    background: rgba(255, 255, 255, 0.8); 
+    background: rgba(255, 165, 0, 1); 
     color: #6441A5;
     text-transform: uppercase;
     position: absolute;
     left: 0;
     right: 0;
-    top: 3rem;
+    top: 8rem;
     width: 11rem;
     margin: auto;
     transition: all 0.2s ease-in-out; 
 }
-.overlay-fade-in:hover .button {
-    background: orange; 
-    color: #ffffff;
-    border: 0.2rem solid rgba(59, 184, 22, 0.0);
-}
 .overlay-fade-in:hover img {
     opacity: 1;
-    transform: scale(1.2); 
+    transform: scale(1); 
 }
 
 .overlay-fade-in:hover .button {
@@ -196,6 +177,53 @@ a:hover {
 
 /* Medium mains, Desktops */
 @media only screen and (min-width : 62rem) {  /* 992 / 16 = 62rem */
+    h1 {
+        font-size: 3rem;
+    }
+    p {
+        position: absolute;
+        bottom: 2rem;
+    }
+    h2 {
+        position: absolute;
+        bottom: 2rem;
+    }
+    a:hover {
+        color: #fff;
+    }
+    .button:hover {
+        background-color: orange;
+        border: 0.3rem solid orange;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);  /* schaduw-1  */
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);  /* schaduw-2  */
+    }
+     .main > div {
+    height: 16rem;
+    } 
+    .overlay-fade-in h2 {
+        padding: 0.1rem;
+    }
+    .overlay-fade-in p {
+        background: rgba(42,8,69, 0.7);
+    }
+    .overlay-fade-in:hover h2 {
+        transform: translateY(10rem);
+    } 
+    .overlay-fade-in:hover p {
+        transform: translateY(0rem);
+    }
+    .overlay-fade-in .button, .overlay-fade-in:hover .button {   
+        background: rgba(255, 255, 255, 0.8);     
+        top: 4rem;   
+    }
+    .overlay-fade-in:hover img {
+        transform: scale(1.2); 
+    }
+    .overlay-fade-in:hover .button {
+        background: orange; 
+        color: #ffffff;
+        border: 0.2rem solid rgba(59, 184, 22, 0.0);
+    }
 
 }
 
