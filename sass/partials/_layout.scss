@@ -1,0 +1,114 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    margin: 5px 0 0 0;
+    text-align: center;
+    position: relative;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1 {
+    margin: 2rem 0;
+}
+h2 {    
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 4rem;
+}
+p {
+    display:inline-block;
+    position: absolute;
+    bottom: 5.3rem; 
+}
+.blok {
+    margin: 1.5rem;
+    max-width: 24rem;
+    height: 20rem;
+    overflow: hidden;    
+}
+.main {
+    max-width: 90rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.credits {
+    margin: 1rem 0.8rem 2rem 0.8rem;
+}
+.image-wrapper {
+    width: 100%;
+    height: 16rem;
+    /* overflow: hidden; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    float: left;
+    text-align: center;
+    z-index: 100;
+    img {
+        max-width: inherit;
+        height: 100%;  
+        z-index: -10;
+    }
+}
+.image-overlay-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    &:hover {
+        width: 100%;
+        height: 100%;
+    }
+}
+.overlay-fade-in {
+    a {
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0.7rem;
+        width: 11rem;
+        margin: auto;
+    }
+    &:hover {
+        @extend a;
+        a  {
+            z-index: 10; 
+        }
+    }    
+}
+
+
+/* Medium mains, Desktops */
+@media only screen and (min-width : 62rem) {  /* 992 / 16 = 62rem */
+    p {
+        position: absolute;
+        bottom: 0.5rem;
+    }
+    h2 {
+        position: absolute;
+        bottom: 1rem;
+    }
+    .blok {
+        height: 16rem;
+    } 
+    .overlay-fade-in {
+        a {
+            bottom: 6rem;  
+        }
+        // &:hover .button {  
+            //   @extend .button;   // error message: you may not @extend an outer selector from within @media
+        //     top: 4rem;  
+        // } 
+         
+    }
+}
